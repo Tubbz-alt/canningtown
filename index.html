@@ -35,7 +35,9 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script>
     jQuery(document).ready(function() {
-  		var map = L.map('map').setView([51.514, 0.008], 16);
+      var map = L.map('map', {
+        zoomControl: false
+      }).setView([51.514, 0.008], 16);
 
   		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
   			maxZoom: 18,
